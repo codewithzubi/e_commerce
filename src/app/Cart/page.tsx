@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import '@/styles/Cart.css';
+import '@/Styles/Cart.css';
 
 const Cart = () => {
   return (
