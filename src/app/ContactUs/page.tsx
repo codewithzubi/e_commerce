@@ -1,5 +1,5 @@
 import React from "react";
-import "@/styles/ContactUs.css";
+import "@/Styles/ContactUs.css";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaClock } from "react-icons/fa";
