@@ -90,13 +90,14 @@ const Navigation: NextPage = () => {
             <Link href="/">Home</Link>
           </div>
           <div className="relative leading-[110%] capitalize font-medium">
-            Shop
+          <Link href="Cart">Shop</Link>
           </div>
           <div className="relative leading-[110%] capitalize font-medium">
             <Link href="Product">Product</Link>
           </div>
           <div className="relative leading-[110%] capitalize font-medium">
-            Pages
+            
+            <Link href="SingleProduct">Pages</Link>
           </div>
           <div className="relative leading-[110%] capitalize font-medium">
             <Link href="About">About</Link>

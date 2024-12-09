@@ -1,37 +1,32 @@
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import type { NextPage } from 'next';
+import Image from "next/image";
 
-export default function Hero() {
+const Header: NextPage = () => {
   return (
-    <div className="container mx-auto px-4 py-16 md:py-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div className="space-y-6">
-          <p className="text-sm tracking-widest uppercase text-gray-600">
-            Welcome to Chairy
-          </p>
-          <h1 className="text-4xl md:text-6xl font-bold text-[#1E1B39] leading-tight">
-            Best Furniture Collection For Your Interior.
-          </h1>
-          <button
-            className="group flex items-center gap-2 bg-[#00B4B4] text-white px-6 py-3 rounded-md hover:bg-[#009999] transition-colors focus:outline-none focus:ring-2 focus:ring-[#00B4B4] focus:ring-offset-2"
-            aria-label="Shop Now"
-          >
-            Shop Now
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+    <div className="w-full h-[850px] relative text-center text-[36px] text-[#f05c52] font-inter overflow-hidden">
+      <div className="absolute top-0 left-0 w-[1740px] h-[850px]">
+        <div className="absolute top-0 left-0 rounded-b-[48px] bg-[#f0f2f3] w-[1740px] h-[850px]" />
+        <Image className="absolute top-[115px] left-[777px] w-[434px] h-[584px] object-cover" width={434} height={584} alt="" src="/chair.png" />
+        <div className="absolute top-[9.65%] right-[14.02%] bottom-[75.76%] left-[77.93%] h-[14.59%] w-[8.05%]">
+          <Image className="absolute top-0 right-0 bottom-0 left-0 w-full h-full object-cover" width={140} height={124} alt="" src="/Vector.svg" />
+          <b className="absolute top-[33px] left-[31px] capitalize leading-[110%]">54%</b>
+          <div className="absolute top-[75px] left-[39px] text-[14px] tracking-[0.02em] font-medium text-[#272343] leading-[110%]">Discount</div>
         </div>
-        <div className="relative h-[500px]">
-          <Image
-            src="/chair.png"
-            alt="Modern accent chair"
-            layout="fill"
-            objectFit="cover"
-            className="object-cover"
-            priority
-            aria-label="Modern accent chair"
-          />
+      </div>
+      <div className="absolute top-[229px] left-[70px] w-[557px] h-[337px] text-left text-[60px] text-[#272343]">
+        <b className="capitalize leading-[110%]">
+          <p>Best Furniture</p>
+          <p>Collection for your</p>
+          <p>interior.</p>
+        </b>
+        <div className="absolute top-[-30px] left-2 text-[14px] tracking-[0.12em] leading-[100%] uppercase ">Welcome to chairy</div>
+        <div className="absolute top-[285px] left-0 flex items-center justify-center gap-[20px] p-[14px_24px] rounded-[8px] bg-[#029fae] text-[16px] font-semibold text-white">
+          <div className="capitalize leading-[110%]">Shop Now</div>
+          <Image className="w-[24px] h-[24px]" width={24} height={24} alt="" src="/Rightarrow.png" />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default Header;

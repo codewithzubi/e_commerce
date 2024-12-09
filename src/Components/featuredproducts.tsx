@@ -18,7 +18,7 @@ const FeaturedProducts: NextPage = () => {
       </div>
 
       {/* Products Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-32"> {/* Increased gap for more space between items */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-32">
         {images.map((image, index) => (
           <div key={index} className="relative w-full h-auto bg-white rounded-lg shadow-lg p-4">
             <Image
@@ -47,13 +47,15 @@ const FeaturedProducts: NextPage = () => {
               />
             </button>
 
-            {/* Conditionally add "New" and "Sales" with spacing */}
-            {index % 4 === 0 && (
+            {/* Show "New" only on the first card (index 0) */}
+            {index === 0 && (
               <div className="absolute top-6 left-6 px-3 py-1 text-white rounded-md text-sm bg-green-500">
                 New
               </div>
             )}
-            {index % 4 === 1 && (
+
+            {/* Show "Sales" only on the second card (index 1) */}
+            {index === 1 && (
               <div className="absolute top-6 left-6 px-3 py-1 text-white rounded-md text-sm bg-[#f5813f]">
                 Sales
               </div>

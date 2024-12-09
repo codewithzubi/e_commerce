@@ -117,19 +117,19 @@ export default function ProductGrid() {
                         ? "default" // Map "success" to "default"
                         : product.badge.variant
                     }
-                    className="absolute top-4 left-4"
+                    className="absolute top-4 left-4 px-10 py-2"
                   >
                     {product.badge.text}
                   </Badge>
                 )}
               </div>
               <div className="p-4">
-                <h3 className="text-purple-600 font-medium mb-2">
+                <h3 className="text-black font-bold mb-2 text-2xl">
                   {product.name}
                 </h3>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="text-purple-600 font-bold">
+                    <span className="text-black font-bold text-2xl">
                       ${product.price}
                     </span>
                     {product.originalPrice && (

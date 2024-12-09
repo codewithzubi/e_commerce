@@ -1,0 +1,35 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Product Page
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-white flex items-center justify-center min-h-screen">
+  <div class="max-w-4xl mx-auto p-4 flex flex-col md:flex-row items-center">
+   <div class="w-full md:w-1/2 p-4">
+    <img alt="A pink library stool chair with black legs" class="rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/bA4TpGTeyFUoek1W41RhMg6fyKYkxA0jfp5okSXrfP5XpTJfE.jpg" width="600"/>
+   </div>
+   <div class="w-full md:w-1/2 p-4">
+    <h1 class="text-3xl font-bold text-gray-900 mb-4">
+     Library Stool Chair
+    </h1>
+    <div class="text-lg text-teal-600 font-semibold mb-4">
+     $20.00 USD
+    </div>
+    <p class="text-gray-600 mb-4">
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt erat enim. Lorem ipsum dolor sit amet, consectetur adipiscing
+    </p>
+    <button class="bg-teal-600 text-white px-4 py-2 rounded-lg flex items-center">
+     <i class="fas fa-shopping-cart mr-2">
+     </i>
+     Add To Cart
+    </button>
+   </div>
+  </div>
+ </body>
+</html>
