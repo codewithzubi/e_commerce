@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react"
 
 export default function Hero() {
   return (
-    <div className="container mx-auto px-4 py-16 md:py-24 ">
+    <div className="container mx-auto px-4 py-16 md:py-24">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="space-y-6">
           <p className="text-sm tracking-widest uppercase text-gray-600">
@@ -12,7 +12,10 @@ export default function Hero() {
           <h1 className="text-4xl md:text-6xl font-bold text-[#1E1B39] leading-tight">
             Best Furniture Collection For Your Interior.
           </h1>
-          <button className="group flex items-center gap-2 bg-[#00B4B4] text-white px-6 py-3 rounded-md hover:bg-[#009999] transition-colors">
+          <button
+            className="group flex items-center gap-2 bg-[#00B4B4] text-white px-6 py-3 rounded-md hover:bg-[#009999] transition-colors focus:outline-none focus:ring-2 focus:ring-[#00B4B4] focus:ring-offset-2"
+            aria-label="Shop Now"
+          >
             Shop Now
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
@@ -21,13 +24,14 @@ export default function Hero() {
           <Image
             src="/chair.png"
             alt="Modern accent chair"
-            fill
-            className="object-contain"
+            layout="fill"
+            objectFit="cover"
+            className="object-cover"
             priority
+            aria-label="Modern accent chair"
           />
         </div>
       </div>
     </div>
   )
 }
-

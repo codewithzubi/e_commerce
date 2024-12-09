@@ -1,18 +1,11 @@
 import Link from "next/link"
 import Image from "next/image";
-import { Input } from "@/Components/ui/input"
-import { Button } from "@/Components/ui/button"
-import { FaFacebookF} from "react-icons/fa";
+import { Input } from "../Components/ui/input"
+import { Button } from "../Components/ui/button"
+import { FaFacebookF } from "react-icons/fa";
 import { CiTwitter } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-
-
-
-
-  
-  
-   
 
 export function Footer() {
   return (
@@ -20,15 +13,13 @@ export function Footer() {
       <div className="container px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
-           
             <Link href="/" className="flex items-center space-x-2">
-            <Image
-            alt="LOGO"
-            src="/LogoIcon.png"
-            width={40}
-            height={40}
-            >
-            </Image>
+              <Image
+                alt="Comforty Logo"
+                src="/LogoIcon.png"
+                width={40}
+                height={40}
+              />
               <span className="text-xl font-bold">Comforty</span>
             </Link>
             <p className="text-sm text-gray-500">
@@ -36,26 +27,25 @@ export function Footer() {
               Cras egestas purus
             </p>
             <div className="flex gap-4">
-              <Link href="#" className="text-gray-400 hover:text-primary">
-              <FaFacebookF className="h-10 w-10 p-1 rounded-full border border-black text-black " />
+              <Link href="#" aria-label="Facebook" className="text-gray-400 hover:text-primary">
+                <FaFacebookF className="h-8 w-8 p-1 rounded-full border border-black text-black" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-primary">
-              <CiTwitter className="h-10 w-10 p-1 rounded-full border border-black text-black" />
+              <Link href="#" aria-label="Twitter" className="text-gray-400 hover:text-primary">
+                <CiTwitter className="h-8 w-8 p-1 rounded-full border border-black text-black" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-primary">
-
-              <FaInstagram className="h-10 w-10 p-1 rounded-full border border-black text-black"/>
+              <Link href="#" aria-label="Instagram" className="text-gray-400 hover:text-primary">
+                <FaInstagram className="h-8 w-8 p-1 rounded-full border border-black text-black" />
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-primary">
-              <FaYoutube className="h-10 w-10 p-1 rounded-full border border-black text-black"/>
-
+              <Link href="#" aria-label="YouTube" className="text-gray-400 hover:text-primary">
+                <FaYoutube className="h-8 w-8 p-1 rounded-full border border-black text-black" />
               </Link>
             </div>
           </div>
+
           <div>
             <h3 className="font-semibold mb-4">CATEGORY</h3>
             <ul className="space-y-2">
-              {["Sofa", "Armchair", "Wing Chair", "Desk Chair", "wooden Chair", "Park Bench"].map(
+              {["Sofa", "Armchair", "Wing Chair", "Desk Chair", "Wooden Chair", "Park Bench"].map(
                 (item) => (
                   <li key={item}>
                     <Link href="#" className="text-sm text-gray-500 hover:text-primary">
@@ -66,15 +56,11 @@ export function Footer() {
               )}
             </ul>
           </div>
+
           <div>
             <h3 className="font-semibold mb-4">SUPPORT</h3>
             <ul className="space-y-2">
-              {[
-                "Help & Support",
-                "Tearms & Conditions",
-                "Privacy Policy",
-                "Help",
-              ].map((item) => (
+              {["Help & Support", "Terms & Conditions", "Privacy Policy", "Help"].map((item) => (
                 <li key={item}>
                   <Link href="#" className="text-sm text-gray-500 hover:text-primary">
                     {item}
@@ -83,6 +69,7 @@ export function Footer() {
               ))}
             </ul>
           </div>
+
           <div className="space-y-4">
             <h3 className="font-semibold">NEWSLETTER</h3>
             <form className="flex gap-2">
@@ -94,8 +81,9 @@ export function Footer() {
             </p>
           </div>
         </div>
+
         <div className="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-500">© 2024 - Blogy - Designed & Develop by Zokrsoft</p>
+          <p className="text-sm text-gray-500">© 2024 - Blogy - Designed & Developed by Zokrsoft</p>
           <div className="flex items-center gap-2">
             <div className="w-12 h-8 bg-gray-100 rounded flex items-center justify-center">
               <span className="text-xs text-gray-600">PayPal</span>
@@ -112,4 +100,3 @@ export function Footer() {
     </footer>
   )
 }
-

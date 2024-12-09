@@ -1,21 +1,17 @@
-import { NextPage } from 'next';
+import { NextPage } from "next";
 import Image from "next/image";
 
 const FeaturedProducts: NextPage = () => {
-  // Define the array of image paths
-  const images: string[] = [
-    "/img1.png",
-    "/img2.png",
-    "/img3.png",
-    "/img4.png",
-    "/img5.png",
-    "/img6.png",
-    "/img7.png",
-    "/img8.png",
-    "/img5.png",
-    "/img6.png",
-    "/img7.png",
-    "/img6.png",
+  // Define the array of image paths and product details
+  const products = [
+    { image: "/img1.png", name: "Library Stool Chair", price: 20, originalPrice: 39 },
+    { image: "/img2.png", name: "Library Stool Chair", price: 20, originalPrice: 39 },
+    { image: "/img3.png", name: "Library Stool Chair", price: 20, originalPrice: 39 },
+    { image: "/img4.png", name: "Library Stool Chair", price: 20, originalPrice: 39 },
+    { image: "/img5.png", name: "Library Stool Chair", price: 20, originalPrice: 39 },
+    { image: "/img6.png", name: "Library Stool Chair", price: 20, originalPrice: 39 },
+    { image: "/img7.png", name: "Library Stool Chair", price: 20, originalPrice: 39 },
+    { image: "/img8.png", name: "Library Stool Chair", price: 20, originalPrice: 39 },
   ];
 
   return (
@@ -26,21 +22,21 @@ const FeaturedProducts: NextPage = () => {
       </div>
 
       {/* Products Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-32"> {/* Increased gap for more space between items */}
-        {images.map((image, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-32">
+        {products.map((product, index) => (
           <div key={index} className="relative w-full h-auto bg-white rounded-lg shadow-lg p-4">
             <Image
               className="rounded-md"
               width={312}
               height={312}
               alt={`Product Image ${index + 1}`}
-              src={image}
+              src={product.image}
             />
             <div className="flex flex-col mt-4">
-              <div className="text-lg font-medium capitalize">Library Stool Chair</div>
+              <div className="text-lg font-medium capitalize">{product.name}</div>
               <div className="flex items-center gap-2 mt-2">
-                <div className="text-xl font-bold text-gray-800">$20</div>
-                <div className="text-sm line-through text-gray-400">$39</div>
+                <div className="text-xl font-bold text-gray-800">${product.price}</div>
+                <div className="text-sm line-through text-gray-400">${product.originalPrice}</div>
               </div>
             </div>
             <button

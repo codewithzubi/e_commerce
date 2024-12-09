@@ -76,3 +76,8 @@ body {
     @apply bg-background text-foreground;
   }
 }
+html, body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+

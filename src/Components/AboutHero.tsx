@@ -33,4 +33,4 @@ const AboutHero = () => {
   );
 };
 
-export default AboutHero;
+export default AboutHero;

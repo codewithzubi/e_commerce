@@ -1,17 +1,16 @@
-import React from 'react'
-import AboutHero from '@/Components/AboutHero';
-import AboutSection from '@/Components/AboutSection';
-import Aboutpopularproduct from '@/Components/Aboutpopularproduct';
+import React from "react"
+import AboutHero from "../../Components/AboutHero"
+import AboutSection from "../../Components/AboutSection"
+import AboutPopularProduct from "../../Components/Aboutpopularproduct"
 
-const page = () => {
-    return (
-      <div>
-        <AboutHero/>
-            <AboutSection />
-            <Aboutpopularproduct />
-            
-      </div>
-    );
+const Page: React.FC = () => {
+  return (
+    <div>
+      <AboutHero />
+      <AboutSection />
+      <AboutPopularProduct />
+    </div>
+  )
 }
 
-export default page
+export default Page

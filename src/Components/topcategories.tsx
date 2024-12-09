@@ -45,7 +45,7 @@ export default function TopCategories() {
             <Link
               key={category.id}
               href={category.href}
-              className="group relative overflow-hidden rounded-lg aspect-[4/3]"
+              className="group relative overflow-hidden rounded-lg aspect-[4/3] transition-all duration-300 ease-in-out"
             >
               <Image
                 src={category.image}
@@ -53,13 +53,12 @@ export default function TopCategories() {
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black h-24 top-[220px]">
-                <div className="absolute bottom-0 left-0 p-6 text-white">
-                  <h3 className="text-xl font-semibold mb-2">{category.name}</h3>
-                  <p className="text-sm text-gray-200">
-                    {category.productCount.toLocaleString()} Products
-                  </p>
-                </div>
+              <div className="absolute inset-0 bg-black opacity-50 hover:opacity-70"></div>
+              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                <h3 className="text-xl font-semibold mb-2">{category.name}</h3>
+                <p className="text-sm text-gray-200">
+                  {category.productCount.toLocaleString()} Products
+                </p>
               </div>
             </Link>
           ))}
@@ -68,4 +67,3 @@ export default function TopCategories() {
     </section>
   )
 }
-

@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { ShoppingCart } from "lucide-react";
-import { Button } from "@/Components/ui/button";
-import { Badge } from "@/Components/ui/badge";
+import { Button } from "../Components/ui/button";
+import { Badge } from "../Components/ui/badge";
 
 interface Product {
   id: string;
@@ -114,7 +114,7 @@ export default function ProductGrid() {
                   <Badge
                     variant={
                       product.badge.variant === "success"
-                        ? "default" // Map 'success' to 'default'
+                        ? "default" // Map "success" to "default"
                         : product.badge.variant
                     }
                     className="absolute top-4 left-4"
