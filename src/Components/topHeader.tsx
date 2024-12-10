@@ -41,7 +41,10 @@ const Navigation: NextPage = () => {
                 src="Group.svg"
               />
             </div>
-            <div className="relative leading-[130%]">Faqs</div>
+            <div className="relative leading-[130%]">
+              
+              <Link href="Faq">Faqs</Link>
+              </div>
             <div className="flex items-start gap-1 opacity-70">
               <Image
                 className="w-[16px] h-[16px] overflow-hidden flex-shrink-0"
