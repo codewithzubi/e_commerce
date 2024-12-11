@@ -139,14 +139,18 @@ export default function ProductGrid() {
                     )}
                   </div>
                   <Button
-                    size="icon"
-                    variant="outline"
-                    onClick={() => handleAddToCart(product.id)}
-                    className="opacity-0 group-hover:opacity-100 transition-opacity"
-                  >
-                    <ShoppingCart className="h-4 w-4" />
-                    <span className="sr-only">Add to cart</span>
-                  </Button>
+  size="icon"
+  variant="outline"
+  onClick={() => handleAddToCart(product.id)}
+  className={`${
+    product.id === "1" ? "bg-red-500 hover:bg-red-500" : "bg-transparent hover:bg-blue-500"
+  } text-black px-6 py-3 transition-all`}
+>
+  <ShoppingCart className="h-6 w-8" /> {/* Icon ka size aur bara kar diya */}
+  <span className="sr-only">Add to cart</span>
+</Button>
+
+
                 </div>
               </div>
             </div>

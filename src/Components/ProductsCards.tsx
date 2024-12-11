@@ -2,7 +2,6 @@ import { NextPage } from "next";
 import Image from "next/image";
 
 const FeaturedProducts: NextPage = () => {
-  // Define the array of image paths and product details
   const products = [
     { image: "/img1.png", name: "Library Stool Chair", price: 20, originalPrice: 39 },
     { image: "/img2.png", name: "Library Stool Chair", price: 20, originalPrice: 39 },
@@ -39,8 +38,14 @@ const FeaturedProducts: NextPage = () => {
                 <div className="text-sm line-through text-gray-400">${product.originalPrice}</div>
               </div>
             </div>
+
+            {/* Add to Cart Button */}
             <button
-              className="absolute bottom-4 right-4 flex items-center justify-center w-10 h-10 bg-blue-500 text-white rounded-sm shadow-md hover:bg-blue-600"
+              className={`absolute bottom-4 right-4 flex items-center justify-center w-10 h-10 transition-all duration-300 ${
+                index === 0
+                  ? "bg-[#029fae] text-white" // First card: blue background and white icon
+                  : "bg-white text-black border border-gray-300 hover:bg-[#029fae] hover:text-white" // Other cards: hover changes background and text/icon color
+              } rounded-sm shadow-md`}
               aria-label="Add to Cart"
             >
               <Image
@@ -48,6 +53,7 @@ const FeaturedProducts: NextPage = () => {
                 height={24}
                 alt="Add to Cart"
                 src="/addCart.png"
+                className={`${index !== 0 ? "filter invert hover:filter-none" : ""}`} // Change icon to white on hover
               />
             </button>
 

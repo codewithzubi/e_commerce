@@ -11,14 +11,14 @@ const FeaturedProducts: NextPage = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center py-8">
+    <div className="flex flex-col items-center px-10">
       {/* Heading Section */}
       <div className="flex justify-between w-full px-12 items-center">
         <div className="text-2xl font-semibold capitalize">Featured Products</div>
       </div>
 
       {/* Products Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-32">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  gap-y-32">
         {images.map((image, index) => (
           <div key={index} className="relative w-full h-auto bg-white rounded-lg shadow-lg p-4">
             <Image
@@ -28,24 +28,26 @@ const FeaturedProducts: NextPage = () => {
               alt={`Product Image ${index + 1}`}
               src={image}
             />
-            <div className="flex flex-col mt-4">
-              <div className="text-lg font-medium capitalize">Library Stool Chair</div>
+            <div className="flex flex-col mt-4 cursor-pointer">
+              < div className="text-lg font-medium capitalize text-[#557580]">Library Stool Chair</div>
               <div className="flex items-center gap-2 mt-2">
                 <div className="text-xl font-bold text-gray-800">$20</div>
                 <div className="text-sm line-through text-gray-400">$39</div>
               </div>
             </div>
             <button
-              className="absolute bottom-4 right-4 flex items-center justify-center w-10 h-10 bg-blue-500 text-white rounded-sm shadow-md hover:bg-blue-600"
-              aria-label="Add to Cart"
-            >
-              <Image
-                width={24}
-                height={24}
-                alt="Add to Cart"
-                src="/addCart.png"
-              />
-            </button>
+  className={`absolute bottom-4 right-4 flex items-center justify-center w-10 h-10 
+    ${index === 0 ? "bg-[#029fae] text-white" : "bg-gray-300 text-black"} 
+    rounded-sm shadow-md`}
+  aria-label="Add to Cart"
+>
+  <Image
+    width={24}
+    height={24}
+    alt="Add to Cart"
+    src="/addCart.png"
+  />
+</button>
 
             {/* Show "New" only on the first card (index 0) */}
             {index === 0 && (
