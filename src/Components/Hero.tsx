@@ -7,11 +7,7 @@ const Header: NextPage = () => {
       <div className="absolute top-0 left-0 w-[1740px] h-[850px]">
         <div className="absolute top-0 left-0 rounded-b-[48px] bg-[#f0f2f3] w-[1740px] h-[850px]" />
         <Image className="absolute top-[115px] left-[777px] w-[434px] h-[584px] object-cover" width={434} height={584} alt="" src="/chair.png" />
-        {/* <div className="absolute top-[9.65%] right-[14.02%] bottom-[75.76%] left-[77.93%] h-[14.59%] w-[8.05%]">
-          <Image className="absolute top-0 right-0 bottom-0 left-0 w-full h-full object-cover" width={140} height={124} alt="" src="/Vector.svg" />
-          <b className="absolute top-[33px] left-[31px] capitalize leading-[110%]">54%</b>
-          <div className="absolute top-[75px] left-[39px] text-[14px] tracking-[0.02em] font-medium text-[#272343] leading-[110%]">Discount</div>
-        </div> */}
+       
       </div>
       <div className="absolute top-[229px] left-[70px] w-[557px] h-[337px] text-left text-[60px] text-[#272343]">
         <b className="capitalize leading-[110%]">

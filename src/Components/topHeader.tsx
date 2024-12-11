@@ -89,10 +89,10 @@ const Navigation: NextPage = () => {
 
       <div className="w-full shadow-[0_1px_0px_#e1e3e5] bg-white h-[74px] flex items-center justify-between p-[14px_10%] box-border text-xs text-[#636270]">
         <div className="flex items-center gap-8">
-          <div className="relative leading-[110%] text-[#007580] capitalize font-bold">
+          <div className="relative leading-[110%] text-[#007580] capitalize font-medium">
             <Link href="/">Home</Link>
           </div>
-          <div className="relative leading-[110%] capitalize font-medium hover:text-[#007580]">
+          <div className="relative leading-[110%] capitalize font-medium">
           <Link href="Cart">Shop</Link>
           </div>
           <div className="relative leading-[110%] capitalize font-medium">
