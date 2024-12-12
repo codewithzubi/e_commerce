@@ -1,8 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import { FaHeart, FaTrashAlt } from 'react-icons/fa';
+import { FaHeart, FaTrashAlt } from "react-icons/fa";
 
-const CartItem = ({ imageSrc, title, description, size, quantity, price }) => (
+// Props ke liye type define karna
+type CartItemProps = {
+  imageSrc: string;
+  title: string;
+  description: string;
+  size: string;
+  quantity: number;
+  price: number;
+};
+
+const CartItem: React.FC<CartItemProps> = ({ imageSrc, title, description, size, quantity, price }) => (
   <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 p-4 border-b border-gray-200">
     <Image
       src={imageSrc}
@@ -80,4 +90,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
