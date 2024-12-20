@@ -70,7 +70,7 @@ const Navigation = () => {
             width={40}
             height={40}
             alt=""
-            src="/Logoicon.png"
+            src="/Logo Icon.jpg"
           />
           <div className="relative leading-[120%] font-medium">Comforty</div>
         </div>

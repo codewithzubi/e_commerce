@@ -83,7 +83,7 @@ export default function ProductGrid() {
       id: "8",
       name: "Library Stool Chair",
       price: 20,
-      image: "/img2.png ",
+      image: "/img2.png",
     },
   ];
 

@@ -3,6 +3,15 @@ import Image from "next/image";
 import { BsCartDash } from "react-icons/bs";
 
 const ProductCarousel: NextPage = () => {
+  // Array of different image paths
+  const productImages = [
+    "/pillowchair.png",
+    "/img1.png",
+    "/img7.png",
+    "/img3.png",
+    "/Frame.jpg"
+  ];
+
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Featured Product Section */}
@@ -45,15 +54,15 @@ const ProductCarousel: NextPage = () => {
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {[1, 2, 3, 4, 5].map((product) => (
-            <div key={product} className="flex flex-col">
+          {productImages.map((imageSrc, index) => (
+            <div key={index} className="flex flex-col">
               <div className="relative aspect-square mb-2">
                 <Image
                   className="rounded-md object-cover"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt="Library Stool Chair"
-                  src="/pillowchair.png"
+                  alt={`Chair ${index + 1}`}
+                  src={imageSrc}
                 />
               </div>
               <div className="flex justify-between items-center">
